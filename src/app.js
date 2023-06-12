@@ -16,12 +16,6 @@ async function main(){
 
     let html = await HTMLParser.Parse(usuarios);
 
-    // escritor.Write("../HTML/" + Date.now() + ".html", html);
-
-    dados = await reader.Read("../CSV/dataset.csv");
-    dadosProcessados = Processor.Process(dados);
-    let dataset = new Table(dadosProcessados);
-    html = await HTMLParser.Parse(dataset);
     escritor.Write("../HTML/" + Date.now() + ".html", html);
 }
 
